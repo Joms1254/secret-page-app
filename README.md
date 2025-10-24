@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Secret Page App
 
-## Getting Started
+built with Next.js (TypeScript), Tailwind CSS, and Supabase.  
+The app allows users to register, log in, manage secret messages, connect with friends, and share secrets securely protected by Row-Level Security (RLS) and real-time Supabase authentication.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Authentication
+- User registration and login using Supabase Auth  
+- Route protection via Next.js middleware  
+- Logout and permanent account deletion  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Dashboard
+- Central navigation hub for all secret pages  
+- Responsive layout designed with Tailwind CSS  
 
-## Learn More
+### Secret Page 1
+- View your personal secret message  
+- Logout and delete account options  
 
-To learn more about Next.js, take a look at the following resources:
+### Secret Page 2
+- Add or update your secret message  
+- Inherits all Secret Page 1 functionality  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Secret Page 3
+- Send, accept, and reject friend requests  
+- View friends and their secret messages  
+- Attempting to view non-friends’ secrets returns a 401 Unauthorized (via RLS)  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Category | Technology |
+|-----------|-------------|
+| Framework | Next.js 14 |
+| Language | TypeScript |
+| Styling | Tailwind CSS|
+| Database & Auth | Supabase |
+| Security | Row-Level Security (RLS) |
+| Deployment | Vercel |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
